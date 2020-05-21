@@ -1,0 +1,10 @@
+{
+  "data": [
+      {
+        "first_name" : "Anna",
+        "last_name" : "Morisson",
+        "job" : "Student",
+        "progress_of_week" : 60
+      } 
+  ]
+}

@@ -1,0 +1,445 @@
+@import "block-vert";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+
+body {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  user-select: none;
+  height: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+// article,
+// aside,
+// details,
+// figcaption,
+// figure,
+// footer,
+// header,
+// hgroup,
+// menu,
+// nav,
+// section {
+//   display: block;
+// }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+// @media (prefers-reduced-motion: no-preference) {
+//   .App-logo {
+//     animation: App-logo-spin infinite 20s linear;
+//   }
+// }
+
+// @keyframes App-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/// DASHBOARD GRID //////////////////////////////////
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 240px 1fr 0.4fr;
+  grid-template-areas:
+    "sidenav main aside"
+    "sidenav main aside"
+    "sidenav main aside";
+  column-gap: 1em;
+  height: 100vh;
+}
+
+.sidenav {
+  grid-area: sidenav;
+}
+
+.main {
+  grid-area: main;
+}
+
+.aside {
+  grid-area: aside;
+  background-color: #64a68e;
+}
+
+// .footer {
+//   grid-area: footer;
+//   background-color: #648ca6;
+// }
+
+/// MAIN GRID /////////////////////////
+
+.grid-main {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  grid-template-rows: 0.5fr 1fr 0.4fr;
+  grid-template-areas:
+    "welcome welcome"
+    "vide time"
+    "courses courses";
+  height: 100vh;
+}
+
+.time {
+  grid-area: time;
+  background-color: #8fd4d9;
+}
+.courses {
+  grid-area: courses;
+}
+
+/// HEADER GRID ///////////////////////
+
+.grid-nav {
+  display: grid;
+  // grid-template-columns: 1fr;
+  // grid-template-rows: 1fr 0.6fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "navigation"
+    "goUpgrade";
+  height: 100vh;
+}
+
+.navigation {
+  grid-area: navigation;
+}
+.go-upgrade {
+  grid-area: goUpgrade;
+}
+
+/// ASIDE GRID ///////////////////////
+
+.grid-aside {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.7fr 1fr;
+  grid-template-areas:
+    "logout"
+    "progress"
+    "reminders";
+  height: 100vh;
+}
+
+.logout {
+  grid-area: logout;
+  background-color: #ffeb3b91;
+}
+.progress {
+  grid-area: progress;
+  background-color: #21c2dc;
+}
+.reminders {
+  grid-area: reminders;
+  background-color: #795548;
+}
+
+header nav {
+  h1 {
+    font-weight: bold;
+  }
+  .title {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1rem;
+    padding-top: 2rem;
+  }
+  & .nav {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 3.5vh;
+    margin: 2rem;
+    padding-inline-start: initial;
+    li {
+      transition: 0.4s;
+      &:hover {
+        opacity: 0.6;
+        transform: scale(1.1);
+      }
+      // &:last-child {
+      //   margin-bottom: 4rem;
+      // }
+      & a {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-auto-columns: 0.4fr 1fr;
+        grid-auto-flow: column;
+        // text-align: justify;
+        // line-height: 1.8;
+        color: #22495a;
+        text-decoration: none;
+      }
+      & p {
+        color: #bbbbd3;
+        font-weight: bold;
+      }
+    }
+  }
+  .nav-icon {
+    max-width: 50%;
+  }
+}
+
+.upgrade {
+  max-width: 80%;
+  margin: -85px auto;
+}
+
+h4 {
+  color: #bbbcd4;
+  text-align: center;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+
+span {
+  font-weight: bold;
+  color: black;
+}
+
+header nav,
+header article div {
+  box-shadow: rgba(34, 73, 90, 0.51) 7px 7px 18px 0px;
+  border-radius: 15px;
+  margin: 3rem 1rem;
+}
+
+header article div {
+  display: grid;
+  justify-content: center;
+  align-self: center;
+  grid-gap: 2em;
+  padding: 2rem;
+  background-color: #f5f5fb;
+  // margin-top: 6rem;
+}
+
+.btn-upgrade {
+  margin: auto;
+  width: 135px;
+  height: 40px;
+  box-shadow: 7px 7px 25px 0 rgba(93, 127, 244, 0.57);
+  cursor: pointer;
+  background-color: #5e80f4;
+  color: #fff;
+  border-radius: 10px;
+}
+
+/// Welcome View //////////////////////////
+
+.welcome {
+  grid-area: welcome;
+  h2 {
+    color: #fd6472;
+    font-size: 20px;
+    font-weight: bold;
+    & + p {
+      color: #787085;
+    }
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  & > div {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    background-color: #f7e5e9;
+    margin: 2rem 1rem;
+    padding: 2rem;
+    border-radius: 15px;
+    & > div {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      align-items: center;
+    }
+  }
+  & > article > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: auto 1rem;
+    margin-top: 2rem;
+  }
+}
+
+.img-welcome {
+  width: 80%;
+  margin: -60px auto 0px auto;
+}
+
+.search-icon {
+  margin-left: auto;
+  width: 2rem;
+}
+
+/// Laptop view //////////////////////////////////
+@media screen and (height: 720px) {
+  header nav,
+  header article div {
+    margin: 1rem;
+  }
+  header article div {
+    // grid-gap: 1vh;
+    margin-top: 2rem;
+  }
+  header nav .nav {
+    margin: 2rem 2rem 3vh 2rem;
+  }
+  .upgrade {
+    max-width: 60%;
+  }
+  .grid-nav {
+    grid-row-gap: 2em;
+  }
+}
+
+.courses {
+  .courses-title {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: auto 2rem;
+    margin-top: 0.5rem;
+    h3 {
+      font-weight: 500;
+    }
+    & > div {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      p {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.arrow-right {
+  width: 1rem;
+  margin-left: 1rem;
+  // filter: invert(100%) brightness(100%);
+}
+
+.btn-courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
+  align-items: center;
+  margin: auto 1rem;
+  margin-top: 1rem;
+}
+
+.btn-courses-scroll {
+  overflow-x: scroll;
+}
+
+.btn-course {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #4d4cab;
+  color: white;
+  padding: 1rem;
+  grid-row: none;
+  width: 18vw;
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+  & > p {
+    background-color: #5a5ab2;
+    margin: auto;
+    padding: 1em;
+    border-radius: 7px;
+    font-weight: bold;
+  }
+  .course-category {
+    font-size: 10px;
+    color: #b5b5d8;
+  }
+  button {
+    background-color: transparent;
+    align-self: end;
+  }
+}
+
+.btn-course--Grammar {
+  background-color: #4d4cab;
+}
+
+.btn-course--Vocabulary {
+  background-color: #fe808b;
+}
+
+.btn-course--PhrasalVerbs {
+  background-color: #9598d7;
+}
+
+.btn-course--Listening {
+  background-color: #5e80f4;
+}

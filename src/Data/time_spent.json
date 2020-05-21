@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "day_of_week": 0,
+      "time_spent_percentage": [
+        {
+          "Vocabulary": 38,
+          "Grammar": 19,
+          "Listening": 23,
+          "Writing": 20
+        }
+      ]
+    },
+    {
+      "day_of_week": 1,
+      "time_spent_percentage": [
+        {
+          "Vocabulary": 6,
+          "Grammar": 8,
+          "Listening": 78,
+          "Writing": 9
+        }
+      ]
+    },
+    {
+      "day_of_week": 2,
+      "time_spent_percentage": [
+        {
+          "Vocabulary": 21,
+          "Grammar": 58,
+          "Listening": 12,
+          "Writing": 9
+        }
+      ]
+    },
+    {
+      "day_of_week": 3,
+      "time_spent_percentage": [
+        {
+          "Vocabulary": 30,
+          "Grammar": 16,
+          "Listening": 33,
+          "Writing": 21
+        }
+      ]
+    },
+    {
+      "day_of_week": 4,
+      "time_spent_percentage": [
+        {
+          "Vocabulary": 30,
+          "Grammar": 34,
+          "Listening": 13,
+          "Writing": 23
+        }
+      ]
+    },
+    {
+      "day_of_week": 5,
+      "time_spent_percentage": [
+        {
+          "Vocabulary": 10,
+          "Grammar": 22,
+          "Listening": 17,
+          "Writing": 51
+        }
+      ]
+    },
+    {
+      "day_of_week": 6,
+      "time_spent_percentage": [
+        {
+          "Vocabulary": 31,
+          "Grammar": 19,
+          "Listening": 17,
+          "Writing": 33
+        }
+      ]
+    }
+  ]
+}
