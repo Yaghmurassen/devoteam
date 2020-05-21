@@ -1,5 +1,4 @@
 import React, { useState, useEffect, Fragment } from "react";
-// import fetchCourses from "../Data/queries";
 import { fetchCourses } from "../Data/queries";
 
 import "../Assets/scss/main.scss";
@@ -10,12 +9,15 @@ const getClassNameForCourse = (course) => {
   return course.name.replace(/ /g, "");
 };
 
+const getClassNameForCourseLevel = (course) => {
+  return course.id;
+};
+
 const Courses = () => {
   const [courses, setCourses] = useState([]);
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
-    console.log(fetchCourses());
     setCourses(fetchCourses());
     if (courses.length > 3) {
       setScroll(true);
@@ -49,7 +51,13 @@ const Courses = () => {
                       course
                     )}`}
                   >
-                    <p>{course.level}</p>
+                    <p
+                      className={`btn-course--${getClassNameForCourseLevel(
+                        course
+                      )}`}
+                    >
+                      {course.level}
+                    </p>
                     <div>
                       <p className="course-category">{course.category}</p>
                       <h3>{course.name}</h3>
