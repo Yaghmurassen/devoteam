@@ -7,7 +7,7 @@ const fetchCourses = () => {
   return courses.data;
 };
 
-const fetchProfil = () => {
+const fetchProfiles = () => {
   return profile.data;
 };
 
@@ -15,8 +15,8 @@ const fetchReminders = () => {
   return reminders.data;
 };
 
-const fetchTime = () => {
+const fetchTimes = () => {
   return time.data;
 };
 
-export { fetchCourses, fetchProfil, fetchReminders, fetchTime };
+export { fetchCourses, fetchProfiles, fetchReminders, fetchTimes };

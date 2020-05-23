@@ -65,6 +65,10 @@ button {
   }
 }
 
+h3 {
+  font-weight: 500;
+}
+
 // @media (prefers-reduced-motion: no-preference) {
 //   .App-logo {
 //     animation: App-logo-spin infinite 20s linear;
@@ -421,9 +425,6 @@ header article div {
     font-size: 10px;
     color: #b5b5d8;
     margin-bottom: 6px;
-  }
-  h3 {
-    font-weight: 500;
   }
   button {
     background-color: transparent;

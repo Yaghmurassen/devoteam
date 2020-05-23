@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import Courses from "./Components/Courses";
+import Time from "./Components/Time";
 
 import "./Assets/scss/main.scss";
 
@@ -99,7 +100,7 @@ const App = () => {
               <img src={welcome} alt="welcome" className="img-welcome" />
             </div>
           </article>
-          <article className="time"></article>
+          <Time />
           <Courses />
         </main>
 
