@@ -34,10 +34,10 @@ const Courses = () => {
         <article>
           <div className="courses-title">
             <h3>Your courses</h3>
-            <div>
+            <button>
               <p>More</p>
               <img src={arrowRight} alt="arrow-right" className="arrow-right" />
-            </div>
+            </button>
           </div>
         </article>
         <article

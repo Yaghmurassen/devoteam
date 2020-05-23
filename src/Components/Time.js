@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useCallback, Fragment } from "react";
-import { fetchTime } from "../Data/queries";
+import { fetchTimes } from "../Data/queries";
 import Chart from "react-apexcharts";
 
 import "../Assets/scss/main.scss";
+import arrowSort from "../Assets/Pictures/arrow-sort.png";
 
 const displayDays = {
   0: "Sun",
@@ -14,20 +15,18 @@ const displayDays = {
   6: "Sat",
 };
 
-////// Objet : pas de notion d'index, seulement de clef
-
 const getDays = (times) =>
   times.map(({ day_of_week }) => displayDays[day_of_week]);
 
 const getTimes = (times) => {
-  times.map((element) => {
-    let timeSpent = element.time_spent_percentage;
+  times.map(({ time_spent_percentage }) => {
+    let timeSpent = time_spent_percentage;
     return timeSpent;
   });
 };
 
 const Time = () => {
-  const [time, setTime] = useState([]);
+  const [times, setTime] = useState([]);
   const [series, setSeries] = useState([
     {
       name: "",
@@ -75,16 +74,22 @@ const Time = () => {
   });
 
   useEffect(() => {
-    setTime(fetchTime());
-    setOptions({ ...options, xaxis: { categories: getDays(time) } });
+    setTime(fetchTimes());
+    setOptions({ ...options, xaxis: { categories: getDays(times) } });
     // setSeries({...options, );
-    console.log(time, options, getDays(time));
-  }, [time]);
+    console.log(times, options, getDays(times));
+  }, [times]);
 
   return (
     <Fragment>
       <article className="time">
-        <h3>Time spent on learning</h3>
+        <div className="time-title">
+          <h3>Time spent on learning</h3>
+          <button className="time-sort">
+            <p>Last week</p>
+            <img src={arrowSort} alt="arrow-sort" />
+          </button>
+        </div>
         <Chart options={options} series={series} type="bar" />
       </article>
     </Fragment>
