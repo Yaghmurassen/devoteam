@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { fetchProfiles } from "../Data/queries";
+import { fetchReminders } from "../Data/queries";
 
 import "../Assets/scss/main.scss";
 
