@@ -8,7 +8,7 @@ const Progress = () => {
 
   useEffect(() => {
     setCourses(fetchCourses());
-  }, [courses]);
+  }, []);
 
   console.log(courses);
 

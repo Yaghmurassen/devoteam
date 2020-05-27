@@ -174,7 +174,7 @@ h3 {
     "logout"
     "progress"
     "reminders";
-  height: 100vh;
+  height: 98vh;
 }
 
 header nav {
@@ -624,6 +624,8 @@ header article div {
   grid-area: reminders;
   line-height: 1.7;
   overflow: hidden;
+  height: 100%;
+  padding-bottom: 2rem;
   .reminders-title {
     display: grid;
     grid-template-columns: 1fr 1fr;
