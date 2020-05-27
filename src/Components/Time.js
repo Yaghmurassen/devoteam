@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, Fragment } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { fetchTimes } from "../Data/queries";
 import Chart from "react-apexcharts";
 
@@ -25,26 +25,29 @@ const getTimes = (times) => {
   });
 };
 
+const getTimeSeries = (times) => {
+  const timeSeries = [];
+  times.forEach((time) => {
+    const timeSpentPercentages = time.time_spent_percentage[0];
+    let timeSpentPercentageKeys = Object.keys(timeSpentPercentages);
+    timeSpentPercentageKeys.forEach((key) => {
+      const existingTimeSeries = timeSeries.find(
+        (timeSerie) => timeSerie.name === key
+      );
+      if (existingTimeSeries) {
+        existingTimeSeries.data.push(timeSpentPercentages[key]);
+      } else {
+        timeSeries.push({ name: key, data: [timeSpentPercentages[key]] });
+      }
+    });
+  });
+  return timeSeries;
+};
+
 const Time = () => {
   const [times, setTime] = useState([]);
-  const [series, setSeries] = useState([
-    {
-      name: "",
-      data: [],
-    },
-    {
-      name: "",
-      data: [],
-    },
-    {
-      name: "",
-      data: [],
-    },
-    {
-      name: "",
-      data: [],
-    },
-  ]);
+  const [series, setSeries] = useState([]);
+
   const [options, setOptions] = useState({
     chart: {
       type: "bar",
@@ -74,10 +77,12 @@ const Time = () => {
   });
 
   useEffect(() => {
-    setTime(fetchTimes());
+    const times = fetchTimes();
+    setTime(times);
     setOptions({ ...options, xaxis: { categories: getDays(times) } });
-    // setSeries({...options, );
-    console.log(times, options, getDays(times));
+    setSeries(getTimeSeries(times));
+
+    // console.log(times, options, getDays(times));
   }, [times]);
 
   return (

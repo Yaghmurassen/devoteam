@@ -142,7 +142,6 @@ h3 {
 
 .time {
   grid-area: time;
-  background-color: #8fd4d9;
 }
 
 /// HEADER GRID ///////////////////////
@@ -176,11 +175,6 @@ h3 {
     "progress"
     "reminders";
   height: 100vh;
-}
-
-.progress {
-  grid-area: progress;
-  background-color: #21c2dc;
 }
 
 header nav {
@@ -624,11 +618,12 @@ header article div {
   }
 }
 
-///// Reminders /////////////////////////////////////@extend
+///// Reminders /////////////////////////////////////
 
 .reminders {
   grid-area: reminders;
   line-height: 1.7;
+  overflow: hidden;
   .reminders-title {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -652,6 +647,16 @@ header article div {
     padding: 0.7rem;
     border-radius: 10px;
   }
+  .reminders-list-container {
+    height: 100%;
+    overflow-x: scroll;
+    mask-image: linear-gradient(to top, rgba(97, 96, 96, 0.18), rgb(0, 0, 0));
+    //mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  }
+}
+
+.progress,
+.reminders {
   ul {
     margin: 1rem 0px;
   }
@@ -667,9 +672,13 @@ header article div {
   }
 }
 
-// .reminders-alert::before,
-// .reminders-alert::after {
-//   background-color: blue;
-//   width: 100px;
-//   padding: 3rem;
-// }
+////// Progress ///////////////////////////////////////////
+
+.progress {
+  grid-area: progress;
+  line-height: 1.7;
+  p {
+    margin: auto;
+    border-radius: 7px;
+  }
+}

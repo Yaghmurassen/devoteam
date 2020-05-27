@@ -44,9 +44,10 @@ const Courses = () => {
           className={scroll ? "btn-courses btn-courses-scroll" : "btn-courses"}
         >
           {courses.length
-            ? courses.map((course) => {
+            ? courses.map((course, index) => {
                 return (
                   <div
+                    key={index}
                     className={`btn-course btn-course--${getClassNameForCourse(
                       course
                     )}`}
