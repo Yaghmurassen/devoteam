@@ -178,17 +178,9 @@ h3 {
   height: 100vh;
 }
 
-.logout {
-  grid-area: logout;
-  background-color: #ffeb3b91;
-}
 .progress {
   grid-area: progress;
   background-color: #21c2dc;
-}
-.reminders {
-  grid-area: reminders;
-  background-color: #795548;
 }
 
 header nav {
@@ -327,7 +319,7 @@ header article div {
 }
 
 .img-welcome {
-  // width: 80%;
+  width: 80%;
   margin: -60px auto 0px auto;
 }
 
@@ -544,7 +536,7 @@ header article div {
 
 #Vector_10,
 #Vector_11 {
-  animation: skills 2s ease infinite;
+  animation: skills 2s linear infinite;
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -579,4 +571,105 @@ header article div {
   }
 }
 
-/////////
+///////// Logout ///////////////////////////////
+.logout {
+  grid-area: logout;
+  display: grid;
+  grid-template-rows: 0.1fr 0.7fr 0.3fr;
+
+  .logout-title {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: auto 1rem;
+    margin-top: 1rem;
+  }
+
+  .logout-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: none;
+  }
+
+  .logout-icon {
+    width: 1.5rem;
+  }
+
+  .user-icon {
+    max-width: 40%;
+    margin: 1rem auto 0px;
+  }
+
+  .icon-plus {
+    transform: translate(30px, -15px);
+    width: 10%;
+  }
+
+  .user-profile {
+    display: grid;
+    margin: auto;
+  }
+
+  .user-info {
+    margin: auto;
+    text-align: center;
+    line-height: 1.7;
+    p {
+      color: #a3a3c3;
+    }
+  }
+  button {
+    background-color: transparent;
+  }
+}
+
+///// Reminders /////////////////////////////////////@extend
+
+.reminders {
+  grid-area: reminders;
+  line-height: 1.7;
+  .reminders-title {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: auto 1rem;
+    margin-top: 1rem;
+  }
+  .reminders-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: none;
+  }
+  .reminders-icon {
+    width: 1.5rem;
+  }
+  .reminders-alert {
+    width: 65%;
+    margin: auto;
+    background-color: #fef2f3;
+    padding: 0.7rem;
+    border-radius: 10px;
+  }
+  ul {
+    margin: 1rem 0px;
+  }
+  li {
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+    margin: 1rem auto;
+  }
+  p {
+    color: #a3a3c3;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+// .reminders-alert::before,
+// .reminders-alert::after {
+//   background-color: blue;
+//   width: 100px;
+//   padding: 3rem;
+// }

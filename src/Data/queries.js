@@ -8,7 +8,7 @@ const fetchCourses = () => {
 };
 
 const fetchProfiles = () => {
-  return profile.data;
+  return profile.data[0];
 };
 
 const fetchReminders = () => {
