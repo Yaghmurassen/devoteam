@@ -1,26 +1,25 @@
-import React, { useState, useEffect } from "react";
-import { fetchCourses } from "../Data/queries";
-
+import React from "react";
 import "../Assets/scss/main.scss";
 
 const Progress = () => {
-  const [courses, setCourses] = useState({});
-
-  useEffect(() => {
-    setCourses(fetchCourses());
-  }, []);
-
-  console.log(courses);
-
   return (
     <article className="progress">
       <ul>
         <li>
-          <p>C1</p>
+          <p>B2</p>
           <div>
             <h3>English tahu</h3>
-            <p>27 october 2019, friday</p>
+            <p>High intermediate</p>
           </div>
+          <div className="line" />
+        </li>
+        <li>
+          <p>C1</p>
+          <div>
+            <h3>Spanish</h3>
+            <p>Advanced</p>
+          </div>
+          <div className="line" />
         </li>
       </ul>
     </article>
