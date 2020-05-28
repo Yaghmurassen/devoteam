@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import "../Assets/scss/main.scss";
 import logo from "../Assets/Pictures/logo.png";

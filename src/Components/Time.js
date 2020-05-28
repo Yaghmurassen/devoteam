@@ -18,13 +18,6 @@ const displayDays = {
 const getDays = (times) =>
   times.map(({ day_of_week }) => displayDays[day_of_week]);
 
-const getTimes = (times) => {
-  times.map(({ time_spent_percentage }) => {
-    let timeSpent = time_spent_percentage;
-    return timeSpent;
-  });
-};
-
 const getTimeSeries = (times) => {
   const timeSeries = [];
   times.forEach((time) => {
@@ -51,13 +44,13 @@ const Time = () => {
   const [options, setOptions] = useState({
     chart: {
       type: "bar",
-      //   height: 350,
+      height: "100%",
       stacked: true,
       stackType: "100%",
     },
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 992,
         options: {
           legend: {
             position: "bottom",
@@ -71,9 +64,6 @@ const Time = () => {
       categories: [],
       type: "function",
     },
-    // fill: {
-    //   opacity: 1,
-    // },
   });
 
   useEffect(() => {
@@ -81,8 +71,6 @@ const Time = () => {
     setTime(times);
     setOptions({ ...options, xaxis: { categories: getDays(times) } });
     setSeries(getTimeSeries(times));
-
-    // console.log(times, options, getDays(times));
   }, [times]);
 
   return (

@@ -131,7 +131,7 @@ h3 {
 
 .grid-main {
   display: grid;
-  grid-template-columns: 0.75fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 0.5fr 1fr 0.4fr;
   grid-template-areas:
     "welcome welcome"
@@ -639,15 +639,20 @@ header article div {
     align-items: center;
     background: none;
   }
-  .reminders-icon {
+  .reminders-notification {
     width: 1.5rem;
   }
-  .reminders-alert {
+  .reminders-icon {
     width: 65%;
     margin: auto;
-    background-color: #fef2f3;
     padding: 0.7rem;
     border-radius: 10px;
+  }
+  .reminders-icon-alert {
+    background-color: #fef2f3;
+  }
+  .reminders-icon-message {
+    background-color: #eef2fd;
   }
   .reminders-list-container {
     height: 100%;
@@ -683,4 +688,8 @@ header article div {
     margin: auto;
     border-radius: 7px;
   }
+}
+
+.apexcharts-gridlines-horizontal {
+  display: none;
 }

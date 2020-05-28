@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import "../Assets/scss/main.scss";
 import upgrade from "../Assets/Pictures/upgrade.png";

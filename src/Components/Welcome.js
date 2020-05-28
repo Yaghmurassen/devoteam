@@ -1,5 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
-import { fetchProfiles } from "../Data/queries";
+import React from "react";
 import search from "../Assets/Pictures/search.svg";
 
 import "../Assets/scss/main.scss";
