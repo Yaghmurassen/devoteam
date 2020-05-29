@@ -11,7 +11,9 @@ const Progress = () => {
             <h3>English tahu</h3>
             <p>High intermediate</p>
           </div>
-          <div className="line" />
+          <progress value="70" max="100">
+            70%
+          </progress>
         </li>
         <li>
           <p>C1</p>
@@ -19,7 +21,9 @@ const Progress = () => {
             <h3>Spanish</h3>
             <p>Advanced</p>
           </div>
-          <div className="line" />
+          <progress value="40" max="100">
+            40%
+          </progress>
         </li>
       </ul>
     </article>

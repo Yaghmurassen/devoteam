@@ -187,7 +187,7 @@ header nav {
     justify-content: center;
     align-items: center;
     grid-gap: 1rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
   & .nav {
     display: grid;
@@ -276,6 +276,8 @@ header article div {
 
 .welcome {
   grid-area: welcome;
+  margin: 1rem;
+  padding-top: 1rem;
   h2 {
     color: #fd6472;
     font-size: 20px;
@@ -307,8 +309,8 @@ header article div {
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    margin: auto 1rem;
-    margin-top: 2rem;
+    // margin: auto 1rem;
+    // margin-top: 2rem;
   }
 }
 
@@ -570,13 +572,14 @@ header article div {
   grid-area: logout;
   display: grid;
   grid-template-rows: 0.1fr 0.7fr 0.3fr;
-
+  margin: 1rem;
+  padding-top: 1rem;
   .logout-title {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    margin: auto 1rem;
-    margin-top: 1rem;
+    // margin: auto 1rem;
+    // margin-top: 1rem;
   }
 
   .logout-btn {
@@ -626,12 +629,11 @@ header article div {
   overflow: hidden;
   height: 100%;
   padding-bottom: 2rem;
+  margin: 1rem;
   .reminders-title {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    margin: auto 1rem;
-    margin-top: 1rem;
   }
   .reminders-btn {
     display: flex;
@@ -644,7 +646,7 @@ header article div {
   }
   .reminders-icon {
     width: 65%;
-    margin: auto;
+    margin: auto 0px;
     padding: 0.7rem;
     border-radius: 10px;
   }
@@ -684,9 +686,11 @@ header article div {
 .progress {
   grid-area: progress;
   line-height: 1.7;
+  margin: 1rem;
   li {
     grid-gap: 1rem;
     grid-template-columns: 0.2fr 0.6fr 0.4fr;
+    align-items: center;
     & > p {
       margin: auto;
       padding: 0.55rem 0.85rem;
@@ -705,10 +709,20 @@ header article div {
   display: none;
 }
 
-.line {
-  width: 85px;
-  height: 24px;
-  border-bottom: 3px solid #5f82f3;
-  position: absolute;
-  right: 1.5rem;
+///// progress bar //////////////////////////////////////////////
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #5f82f3;
+  border-radius: 2px;
+}
+
+progress {
+  height: 5px !important;
+  width: inherit !important;
 }
