@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect, Fragment, useRef } from "react";
 import { fetchCourses } from "../Data/queries";
 
 import "../Assets/scss/main.scss";
@@ -14,6 +14,8 @@ const getClassNameForCourseLevel = (course) => {
 };
 
 const Courses = () => {
+  let coursesList = useRef(null);
+  let coursesElement = useRef(null);
   const [courses, setCourses] = useState([]);
   const [scroll, setScroll] = useState(false);
 
@@ -28,13 +30,27 @@ const Courses = () => {
     return <h3>Data is loading....</h3>;
   };
 
+  const scrollCourses = () => {
+    coursesElement.current.scrollTo({ left: 0, behavior: "smooth" });
+    coursesList.current.scrollTo({ left: 0, behavior: "smooth" });
+    console.log("scroooooooolllll");
+    // coursesList.current.scrollIntoView({
+    //   behavior: "smooth",
+    //   block: "start",
+    // });
+    // coursesElement.current.scrollIntoView({
+    //   behavior: "smooth",
+    //   block: "start",
+    // });
+  };
+
   return (
     <Fragment>
       <section className="courses">
         <article>
           <div className="courses-title">
             <h3>Your courses</h3>
-            <button>
+            <button onClick={scrollCourses}>
               <p>More</p>
               <img src={arrowRight} alt="arrow-right" className="arrow-right" />
             </button>
@@ -42,6 +58,7 @@ const Courses = () => {
         </article>
         <article
           className={scroll ? "btn-courses btn-courses-scroll" : "btn-courses"}
+          ref={(el) => (coursesList = el)}
         >
           {courses.length
             ? courses.map((course, index) => {
@@ -51,6 +68,7 @@ const Courses = () => {
                     className={`btn-course btn-course--${getClassNameForCourse(
                       course
                     )}`}
+                    ref={(el) => (coursesElement = el)}
                   >
                     <p
                       className={`btn-course--${getClassNameForCourseLevel(

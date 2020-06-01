@@ -8,7 +8,7 @@ const Progress = () => {
         <li>
           <p>B2</p>
           <div>
-            <h3>English tahu</h3>
+            <h3>English</h3>
             <p>High intermediate</p>
           </div>
           <progress value="70" max="100">
