@@ -22,10 +22,12 @@ const App = () => {
           </header>
         </div>
 
-        <main className="main grid-main">
-          <Welcome />
-          <Time />
-          <Courses />
+        <main className="main">
+          <div className="grid-main">
+            <Welcome />
+            <Time />
+            <Courses />
+          </div>
         </main>
 
         <aside className="grid-aside">

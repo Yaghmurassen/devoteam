@@ -1,7 +1,7 @@
 import React from "react";
 
 import "../Assets/scss/main.scss";
-import upgrade from "../Assets/Pictures/upgrade.png";
+import upgrade from "../Assets/Pictures/upgradepro.png";
 
 const Navigation = () => {
   return (

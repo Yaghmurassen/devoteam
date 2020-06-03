@@ -76,14 +76,22 @@ const Time = () => {
   return (
     <Fragment>
       <article className="time">
-        <div className="time-title">
-          <h3>Time spent on learning</h3>
-          <button className="time-sort">
-            <p>Last week</p>
-            <img src={arrowSort} alt="arrow-sort" />
-          </button>
+        <div className="vide" />
+        <div>
+          <div className="time-title">
+            <h3>Time spent on learning</h3>
+            <button className="time-sort">
+              <p>Last week</p>
+              <img src={arrowSort} alt="arrow-sort" />
+            </button>
+          </div>
+          <Chart
+            options={options}
+            series={series}
+            type="bar"
+            className="chart"
+          />
         </div>
-        <Chart options={options} series={series} type="bar" />
       </article>
     </Fragment>
   );

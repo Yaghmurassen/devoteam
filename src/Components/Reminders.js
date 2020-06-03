@@ -63,7 +63,7 @@ const Reminders = () => {
   useEffect(() => {
     setReminders(fetchReminders());
     getDate();
-  }, []);
+  }, [reminders]);
 
   return (
     <article className="reminders">
