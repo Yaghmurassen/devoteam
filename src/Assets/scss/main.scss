@@ -690,9 +690,17 @@ progress {
   width: inherit !important;
 }
 
+// Apex Style //////////////////////////////////
+
 .apexcharts-legend-text {
   font-family: "Montserrat", sans-serif !important;
   color: #a3a3c3 !important;
   font-weight: bold !important;
   font-size: 10px !important;
+}
+
+.apexcharts-text tspan {
+  font-family: "Montserrat", sans-serif !important;
+  color: #a3a3c3 !important;
+  font-size: 12px;
 }
