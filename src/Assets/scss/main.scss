@@ -95,8 +95,7 @@ h3 {
 
 .grid-main {
   display: grid;
-  // grid-template-rows: 0.5fr 1fr 0.4fr;
-  grid-template-rows: 0.3fr 0.4fr 0.5fr;
+  grid-template-rows: 0.3fr 0.4fr 0.3fr;
   grid-template-areas:
     "welcome"
     "time"
@@ -113,6 +112,9 @@ h3 {
     box-shadow: rgba(34, 73, 90, 0.2) 4px 4px 13px 0px;
     border-radius: 15px;
   }
+  // & div:last-child {
+  //   padding: 1rem;
+  // }
 }
 
 /// HEADER GRID & ASIDE GRID  ///////////////////////
