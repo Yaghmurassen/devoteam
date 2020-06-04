@@ -73,7 +73,7 @@ h3 {
   display: grid;
   grid-template-columns: 200px 0.7fr 0.3fr;
   grid-template-areas: "sidenav main aside";
-  column-gap: 1em;
+  column-gap: 2em;
   height: 100vh;
   padding: 20px;
 }
@@ -96,7 +96,7 @@ h3 {
 .grid-main {
   display: grid;
   // grid-template-rows: 0.5fr 1fr 0.4fr;
-  grid-template-rows: 0.3fr 0.4fr 0.3fr;
+  grid-template-rows: 0.3fr 0.4fr 0.5fr;
   grid-template-areas:
     "welcome"
     "time"
@@ -110,18 +110,16 @@ h3 {
   grid-template-columns: 0.4fr 0.6fr;
 }
 
-/// HEADER GRID ///////////////////////
+/// HEADER GRID & ASIDE GRID  ///////////////////////
 
 .grid-nav {
   display: grid;
-  // grid-template-columns: 1fr;
-  // grid-template-rows: 1fr 0.6fr;
   grid-template-rows: 1fr;
   grid-template-areas:
     "navigation"
     "goUpgrade";
   height: 100%;
-  grid-gap: 2rem;
+  grid-gap: 1rem;
 }
 
 .navigation {
@@ -130,8 +128,6 @@ h3 {
 .go-upgrade {
   grid-area: goUpgrade;
 }
-
-/// ASIDE GRID ///////////////////////
 
 .grid-aside {
   display: grid;
@@ -161,7 +157,7 @@ header nav {
     justify-content: center;
     align-content: center;
     grid-gap: 4.5vh;
-    margin: 2rem;
+    margin: 5rem 2rem 0rem 2rem;
     padding-inline-start: initial;
     li {
       transition: 0.4s;
@@ -193,15 +189,15 @@ header nav {
 }
 
 .upgrade {
-  max-width: 80%;
-  margin: -85px auto;
+  max-width: 60%;
+  margin: -75px auto;
 }
 
 h4 {
   color: #bbbcd4;
   text-align: center;
   line-height: 1.7;
-  margin-top: 20px;
+  margin: 20px 0px;
   font-weight: 500;
 }
 
@@ -214,14 +210,13 @@ header nav,
 header article div {
   box-shadow: rgba(34, 73, 90, 0.51) 4px 4px 13px 0px;
   border-radius: 15px;
-  // margin: 3rem 1rem;
 }
 
 header article div {
   display: grid;
   justify-content: center;
   align-self: center;
-  grid-gap: 1em;
+  grid-gap: 0.5em;
   padding: 2rem;
   background-color: #f5f5fb;
 }
@@ -237,14 +232,11 @@ header article div {
   border-radius: 10px;
 }
 
-/// Welcome View //////////////////////////
+/// WELCOME VIEW //////////////////////////
 
 .welcome {
   grid-area: welcome;
   margin-top: 0.7rem;
-  // margin: 1rem;
-  // padding-top: 0.5rem;
-  // margin-bottom: 0;
   & + div {
     margin-top: 0.7rem;
   }
@@ -252,6 +244,7 @@ header article div {
     color: #fd6472;
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 1rem;
     & + p {
       color: #787085;
     }
@@ -295,40 +288,27 @@ header article div {
   background-color: #eef2fd;
 }
 
-/// Laptop view //////////////////////////////////
+/// LAPTOP VIEW//////////////////////////////////
+
 @media screen and (height: 720px) {
-  // header nav,
-  // header article div {
-  //   margin: 1rem 0px 1rem 1rem;
-  // }
-  header article div {
-    margin-top: 2rem;
-  }
   header nav .nav {
-    margin: 4rem 2rem 3vh 2rem;
+    margin: 4rem 2rem;
   }
   .upgrade {
     max-width: 60%;
   }
-  // .grid-nav {
-  //   grid-row-gap: 2em;
-  // }
 }
 
 .courses {
   grid-area: courses;
-  // margin: 2% 0px;
   overflow: auto;
   height: fit-content;
-  // position: relative;
-  // max-width: 50%;
   .courses-title {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    margin: auto 2rem;
-    margin-top: 0.5rem;
+    margin-top: 2.5rem;
     h3 {
       font-weight: 500;
     }
@@ -352,17 +332,14 @@ header article div {
 
 .btn-courses {
   display: grid;
-  // grid-template-columns: repeat(3, 1fr);
   grid-template-columns: repeat(4, 1fr);
   column-gap: 1rem;
   align-items: center;
-  // margin: auto 1rem;
   margin-top: 1rem;
 }
 
 .btn-courses-scroll {
   overflow-x: scroll;
-  // max-width: 60%;
 }
 
 .btn-course {
@@ -375,8 +352,6 @@ header article div {
   background-color: #4d4cab;
   color: white;
   padding: 1rem;
-  // grid-row: none;
-  // width: 18vw;
   @media screen and (max-width: 992px) {
     grid-template-columns: 1fr;
   }
@@ -435,7 +410,6 @@ header article div {
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
-  margin: auto 1rem;
   margin-top: 0.5rem;
   p {
     font-weight: 500;
@@ -585,7 +559,6 @@ header article div {
   }
 
   .user-info {
-    // margin: auto;
     text-align: center;
     line-height: 1.7;
     p {
@@ -604,7 +577,6 @@ header article div {
   line-height: 1.7;
   overflow: hidden;
   height: fit-content;
-  // padding-bottom: 2rem;
   margin: 0px 1rem;
   .reminders-title {
     display: grid;
@@ -638,7 +610,10 @@ header article div {
     mask-image: linear-gradient(to top, rgba(97, 96, 96, 0.18), rgb(0, 0, 0));
     //mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     ul {
-      height: 250px;
+      height: 212px;
+      h3 {
+        font-size: 13px;
+      }
     }
   }
 }

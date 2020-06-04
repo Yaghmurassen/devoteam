@@ -6,16 +6,6 @@ import bell from "../Assets/Pictures/notifications.png";
 import alert from "../Assets/Pictures/alert.png";
 import message from "../Assets/Pictures/message.png";
 
-// const displayDays = {
-//   0: "Monday",
-//   1: "Tuesday",
-//   2: "Wednesday",
-//   3: "Thursday",
-//   4: "Friday",
-//   5: "Saturday",
-//   6: "Sunday",
-// };
-
 const getDate = (timestamp) => {
   let date = new Date(timestamp * 1000).toDateString();
   let arrayDate = date.split(" ");
@@ -50,8 +40,6 @@ const getDate = (timestamp) => {
     default:
       day = "";
   }
-
-  // let day = arrayDate.map((day) => console.log(displayDays[day[0]]));
 
   let cleanDate = `${number} ${month} ${year}, ${day}`;
   return cleanDate;
