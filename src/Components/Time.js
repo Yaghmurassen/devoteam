@@ -64,6 +64,7 @@ const Time = () => {
       categories: [],
       type: "function",
     },
+    colors: ["#fe808b", "#4d4cab", "#5e80f4", "#c8cae8"],
   });
 
   useEffect(() => {

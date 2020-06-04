@@ -108,6 +108,11 @@ h3 {
   grid-area: time;
   display: grid;
   grid-template-columns: 0.4fr 0.6fr;
+  grid-column-gap: 10px;
+  & > div {
+    box-shadow: rgba(34, 73, 90, 0.2) 4px 4px 13px 0px;
+    border-radius: 15px;
+  }
 }
 
 /// HEADER GRID & ASIDE GRID  ///////////////////////
@@ -208,7 +213,7 @@ span {
 
 header nav,
 header article div {
-  box-shadow: rgba(34, 73, 90, 0.51) 4px 4px 13px 0px;
+  box-shadow: rgba(34, 73, 90, 0.2) 4px 4px 13px 0px;
   border-radius: 15px;
 }
 
@@ -218,7 +223,6 @@ header article div {
   align-self: center;
   grid-gap: 0.5em;
   padding: 2rem;
-  background-color: #f5f5fb;
 }
 
 .btn-upgrade {
@@ -308,7 +312,7 @@ header article div {
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     h3 {
       font-weight: 500;
     }
@@ -410,7 +414,7 @@ header article div {
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
-  margin-top: 0.5rem;
+  margin: 0.5rem 15px 0;
   p {
     font-weight: 500;
     font-size: 12px;
@@ -610,7 +614,7 @@ header article div {
     mask-image: linear-gradient(to top, rgba(97, 96, 96, 0.18), rgb(0, 0, 0));
     //mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     ul {
-      height: 212px;
+      height: 215px;
       h3 {
         font-size: 13px;
       }
@@ -684,6 +688,9 @@ progress {
   width: inherit !important;
 }
 
-.chart {
-  margin-right: 1rem;
+.apexcharts-legend-text {
+  font-family: "Montserrat", sans-serif !important;
+  color: #a3a3c3 !important;
+  font-weight: bold !important;
+  font-size: 10px !important;
 }
