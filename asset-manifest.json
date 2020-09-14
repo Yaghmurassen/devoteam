@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/devoteam/static/css/main.71cff088.chunk.css",
+    "main.js": "/devoteam/static/js/main.a6475c4e.chunk.js",
+    "main.js.map": "/devoteam/static/js/main.a6475c4e.chunk.js.map",
+    "runtime-main.js": "/devoteam/static/js/runtime-main.d92815fe.js",
+    "runtime-main.js.map": "/devoteam/static/js/runtime-main.d92815fe.js.map",
+    "static/js/2.f579c5b0.chunk.js": "/devoteam/static/js/2.f579c5b0.chunk.js",
+    "static/js/2.f579c5b0.chunk.js.map": "/devoteam/static/js/2.f579c5b0.chunk.js.map",
+    "index.html": "/devoteam/index.html",
+    "precache-manifest.ff08554b9415137a882b94cdc82bca27.js": "/devoteam/precache-manifest.ff08554b9415137a882b94cdc82bca27.js",
+    "service-worker.js": "/devoteam/service-worker.js",
+    "static/css/main.71cff088.chunk.css.map": "/devoteam/static/css/main.71cff088.chunk.css.map",
+    "static/js/2.f579c5b0.chunk.js.LICENSE.txt": "/devoteam/static/js/2.f579c5b0.chunk.js.LICENSE.txt",
+    "static/media/arrow-right.svg": "/devoteam/static/media/arrow-right.ae213666.svg",
+    "static/media/calendar.svg": "/devoteam/static/media/calendar.17efa687.svg",
+    "static/media/comment.svg": "/devoteam/static/media/comment.4158d743.svg",
+    "static/media/computer.svg": "/devoteam/static/media/computer.e41d1aad.svg",
+    "static/media/edit.svg": "/devoteam/static/media/edit.7b0dc7ee.svg",
+    "static/media/folder.svg": "/devoteam/static/media/folder.2c247094.svg",
+    "static/media/icon-plus.svg": "/devoteam/static/media/icon-plus.237feddb.svg",
+    "static/media/search-icon.svg": "/devoteam/static/media/search-icon.59a47dfb.svg",
+    "static/media/upgradepro.png": "/devoteam/static/media/upgradepro.396111d3.png",
+    "static/media/user-profile.svg": "/devoteam/static/media/user-profile.c7215286.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d92815fe.js",
+    "static/js/2.f579c5b0.chunk.js",
+    "static/css/main.71cff088.chunk.css",
+    "static/js/main.a6475c4e.chunk.js"
+  ]
+}
